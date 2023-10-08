@@ -1,0 +1,103 @@
+
+
+<html>
+<body>
+    <div class="login">
+       <h1>Health App</h1>
+       
+       <form action="/predict" method="post">
+        
+        <h3>
+            <legend>Diabetes Disease Prediction</legend>
+        </h3>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="age" name="age"
+                placeholder="Enter your Age" min='0' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="gender" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="Male">
+                    Male
+                </option>
+                <option value="Female">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Smoking History</label>
+            <select class="form-control" name="smoking_history" placeholder="Enter you ethnicity" required>
+                <option class="placeholder" selected disabled value="">Smoking_History</option>
+                <option value="current">
+                    current
+                </option>
+                <option value="not current">
+                    not current
+                </option>
+                <option value="never">
+                    never
+                </option>
+                
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Hyper Tension</label>
+            <input class="form-control" type="number" name="hypertension"
+                placeholder="Enter RestingBP" min='0' max='100' />
+        </div>
+        
+
+
+        <div class="mb-3">
+            <label class="form-label">Heart Disease</label>
+            <select class="form-control" name="heart_disease"
+                placeholder="Enter FastingBS" required>
+                <option class="placeholder" selected disabled value="">Do you have Heart Disease</option>
+                <option value="1">
+                    Yes
+                </option>
+                <option value="0">
+                    No
+                </option>
+                
+            </select>
+        </div>
+
+       
+
+        <div class="mb-3">
+            <label class="form-label">BMI</label>
+            <input class="form-control" type="float" name="bmi"
+                placeholder="Enter your MaxHR" min='0' max='100' />
+        </div>
+
+            
+        <div class="mb-3">
+            <label class="form-label">HbA1c_level</label>
+            <input class="form-control" type="float" name="HbA1c_level"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Blood Glucose Level</label>
+            <input class="form-control" type="number" name="blood_glucose_level"
+                placeholder="Enter your Reading score" min='0' max='200' />
+        </div>
+        
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict" required />
+        </div>
+    </form>
+    <h2>
+        
+        
+       The  prediction is {{ results }}
+       
+    </h2>
+   <body>
+</html>

@@ -1,0 +1,11 @@
+pandas
+numpy
+seaborn
+scikit-learn
+dill
+pickle
+Flask
+catboost
+xgboost
+dill
+-e .
